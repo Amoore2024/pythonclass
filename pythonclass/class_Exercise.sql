@@ -1,0 +1,12 @@
+use employed_staff;
+show columns from employee_salary_dataset;
+select * from employee_salary_dataset;
+select ID, Salary from employee_salary_dataset where Experience_Years > 5;
+select avg(age) as average_age from employee_salary_dataset;
+select * from employee_salary_dataset order by Salary desc;
+select count(*) as Male_count from employee_salary_dataset where gender = 'Male';
+select sum(Salary) as total_salary from employee_salary_dataset where age between 25 and 35;
+select ID,Age,Salary from employee_salary_dataset order by age asc limit 5;
+select MAX(Experience_Years) as MAX_EXPERIENCE_YEAR from employee_salary_dataset;
+select ID,Gender from employee_salary_dataset where Salary > 50000 and Experience_Years < 3;
+select Gender, avg(Salary) as AVERAGE_SALARY_FOR_GENDER  from employee_salary_dataset group by Gender;
